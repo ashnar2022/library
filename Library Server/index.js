@@ -40,7 +40,7 @@ app.get('/all-books',(req,res)=>{
 
 //Register request
 app.post('/reg',(req,res)=>{
-    dataservices.reg(req.body.id,req.body.username,req.body.password,req.body.email,req.body.stream,req.body.phn).then(
+    dataservices.reg(req.body.id,req.body.username,req.body.password,req.body.email,req.body.phn).then(
         result=>{
          res.status(result.statusCode).json(result)
 

@@ -9,7 +9,7 @@ const db=require('./db');
 //   }
 
 
- const reg =(id,username,password,email,stream,phn)=>{                //using mogodb
+ const reg =(id,username,password,email,phn)=>{                //using mogodb
     return db.User.findOne({id}).then(
         user=>{
             if(user){
@@ -26,7 +26,6 @@ const db=require('./db');
                   username:username,
                   password:password,
                   email:email,
-                  stream:stream,
                   phn:phn,
                 })
                 newUser.save()  //to save new data to mongodb
